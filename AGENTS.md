@@ -33,6 +33,9 @@ the owner approves a scope change.
 - Finish and verify the MVP before proposing stretch goals.
 - Rust and C should remain distinct learning tracks, not ports of one another.
 - When a project is started or completed, update its status in `README.md`.
+- `.research/project-idea-backlog.md` is a non-catalog idea pool, not part of
+  the project catalog. Promote an idea only when the owner selects it and
+  decides which catalog entry it replaces.
 
 ## Rust Guidance
 

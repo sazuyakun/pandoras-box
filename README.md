@@ -123,6 +123,10 @@ Sources that directly shaped the scopes:
 Research reviewed on **2026-07-21**. Specifications remain the source of truth
 when implementation begins.
 
+Promising candidates that did not enter the current catalog are preserved in
+the [researched project idea backlog](.research/project-idea-backlog.md). Backlog
+entries are not planned projects and do not count toward the language limits.
+
 ## Ground Rules
 
 - Keep at most three active or planned projects per language at this level.
