@@ -1,0 +1,21 @@
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Rust
+target/
+
+# C build output
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.out
+
+# Local diagnostics
+*.profraw
+*.profdata
+*.dSYM/
