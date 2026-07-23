@@ -1,10 +1,10 @@
 use plotters::prelude::*;
-use wavers::Samples;
+use wavers::{AudioSample, Samples};
 
 const FILE_PATH: &str = "files/plot_1_test.png";
 const CAPTION_NAME: &str = "The WAV Audio Plot";
 
-pub fn plot_graph(samples: &Samples<f32>, sample_rate: i32) {
+pub fn plot_graph<T: AudioSample>(samples: &Samples<T>, sample_rate: i32) {
     // Plotting the samples
     let duration = samples.len() as f32 / sample_rate as f32;
 
@@ -27,7 +27,7 @@ pub fn plot_graph(samples: &Samples<f32>, sample_rate: i32) {
         .draw_series(LineSeries::new(
             samples.iter().enumerate().map(|(index, amplitude)| {
                 let time = index as f32 / sample_rate as f32;
-                (time, *amplitude)
+                (time, amplitude.convert_to())
             }),
             &RED,
         ))
