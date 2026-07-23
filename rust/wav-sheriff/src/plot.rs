@@ -5,7 +5,6 @@ const FILE_PATH: &str = "files/plot_1_test.png";
 const CAPTION_NAME: &str = "The WAV Audio Plot";
 
 pub fn plot_graph<T: AudioSample>(samples: &Samples<T>, sample_rate: i32) {
-    // Plotting the samples
     let duration = samples.len() as f32 / sample_rate as f32;
 
     let root = BitMapBackend::new(FILE_PATH, (640, 640)).into_drawing_area();
@@ -20,8 +19,6 @@ pub fn plot_graph<T: AudioSample>(samples: &Samples<T>, sample_rate: i32) {
         .unwrap();
 
     chart.configure_mesh().draw().unwrap();
-
-    // let iter = samples.iter().enumerate();
 
     chart
         .draw_series(LineSeries::new(
